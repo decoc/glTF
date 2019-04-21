@@ -1,9 +1,9 @@
 ﻿using System;
 
-namespace UnityGlTF
+namespace UnityGlTF.Schema
 {
     [Serializable]
-    public class GlTFTextureBase
+    public class GlTFTextureBase:GlTFProperty
     {
         public int index;
         public int texCoord;

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace UnityGlTF
+namespace UnityGlTF.Schema
 {
     [Serializable]
     public class GlTfOcclusionTexture : GlTFTextureBase

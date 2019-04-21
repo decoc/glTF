@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace UnityGlTF
+namespace UnityGlTF.Schema
 {
     /// <summary>
     /// materialに利用される
     /// </summary>
     [Serializable]
-    public class GlTFTexture
+    public class GlTFTexture:GlTFChildOfRootProperty
     {
         /// <summary>
         /// 参照するImage

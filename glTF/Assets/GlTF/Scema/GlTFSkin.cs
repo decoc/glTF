@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace UnityGlTF
+namespace UnityGlTF.Schema
 {
 
     /// <summary>
@@ -8,7 +8,7 @@ namespace UnityGlTF
     /// 頂点skinningを使用すると，meshの頂点が，現在の姿勢に基づいて影響を受ける
     /// </summary>
     [Serializable]
-    public class GlTFSkin
+    public class GlTFSkin:GlTFChildOfRootProperty
     {
         public int inverseBingMatrices = -1;
 

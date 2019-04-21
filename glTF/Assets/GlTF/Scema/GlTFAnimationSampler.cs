@@ -1,6 +1,6 @@
-﻿namespace UnityGlTF
+﻿namespace UnityGlTF.Schema
 {
-    public class GlTFAnimationSampler
+    public class GlTFAnimationSampler:GlTFProperty
     {
         public int input;
 

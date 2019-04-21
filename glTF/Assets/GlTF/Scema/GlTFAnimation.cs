@@ -1,9 +1,9 @@
 ﻿using System;
 
-namespace UnityGlTF
+namespace UnityGlTF.Schema
 {
     [Serializable]
-    public class GlTFAnimation
+    public class GlTFAnimation:GlTFChildOfRootProperty
     {
         public GlTFAnimationChannel[] channels;
         public GlTFAnimationSampler[] samplers;

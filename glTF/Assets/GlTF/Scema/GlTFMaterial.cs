@@ -1,9 +1,9 @@
 ﻿using System;
 
-namespace UnityGlTF
+namespace UnityGlTF.Schema
 {
     [Serializable]
-    public class GlTFMaterial
+    public class GlTFMaterial:GlTFChildOfRootProperty
     {
         public GlTFPbrMetallicRoughness pbrMetallicRoughness;
 

@@ -1,4 +1,4 @@
-﻿namespace UnityGlTF
+﻿namespace UnityGlTF.Schema
 {
     public class GlTFMetallicRoughnessTexture: GlTFTextureBase
     {

@@ -1,48 +1,74 @@
 ﻿using System;
 
-namespace UnityGlTF
+namespace UnityGlTF.Schema
 {
     /// <summary>
     /// glTFの基本部分は，3Dモデルを含むシーンの構造や構成を記述するJSONファイル
     /// 以下はglTFを構成するトップレベルの要素
     /// </summary>
     [Serializable]
-    public class GlTFObject
+    public class GlTFObject:GlTFProperty
     {
         /// <summary>
         /// アセット情報
         /// </summary>
         public GlTFAsset asset;
 
-        public GlTFScene[]      scenes;
-        public GlTFNode[]       nodes;
+        public GlTFScene[] scenes;
+        public GlTFNode[] nodes;
 
-        // シーンの視点設定
-        public GlTFCamera[]     cameras;
+        /// <summary>
+        /// シーンの視点設定
+        /// </summary>
+        public GlTFCamera[] cameras;
 
-        // 3Dオブジェクトのジオメトリ情報
-        public GlTFMesh[]       meshes;
+        /// <summary>
+        /// 3Dオブジェクトのジオメトリ情報
+        /// </summary>
+        public GlTFMesh[] meshes;
 
-        // 情報参照と情報レイアウト情報
-        public GlTFBuffer[]     buffers;
+        public GlTFBuffer[] buffers;
         public GlTFBufferView[] bufferViews;
-        public GlTFAccessor[]   accessors;
+        public GlTFAccessor[] accessors;
 
-        // オブジェクトのレンダリング方法の定義
-        public GlTFMaterial[]   materials;
+        /// <summary>
+        /// オブジェクトのレンダリング方法の定義
+        /// </summary>
+        public GlTFMaterial[] materials;
 
-        // オブジェクト表面の外観
-        public GlTFTexture[]    textures;
-        public GlTFImage[]      images;
-        public GlTFSampler[]    samplers;
+        /// <summary>
+        /// テクスチャの配列
+        /// </summary>
+        public GlTFTexture[] textures;
 
-        // 頂点スキニングに関する情報
-        public GlTFSkin[]       skins;
+        /// <summary>
+        /// イメージの配列
+        /// </summary>
+        public GlTFImage[] images;
 
-        // 時系列変化に関する情報
-        public GlTFAnimation[]  animations;
+        /// <summary>
+        /// サンプラーの配列。サンプラーにはテクスチャフィルタリング及びラッピングモードのプロパティが含まれている
+        /// </summary>
+        public GlTFSampler[] samplers;
 
-        public string[] extentionUsed;
-        public string[] extentionRequired;
+        /// <summary>
+        /// 頂点スキニングに関する情報
+        /// </summary>
+        public GlTFSkin[] skins;
+
+        /// <summary>
+        /// 時系列変化に関する情報
+        /// </summary>
+        public GlTFAnimation[] animations;
+
+        /// <summary>
+        /// アセット内で使われている拡張名
+        /// </summary>
+        public string[] extensionUsed;
+
+        /// <summary>
+        /// アセットをロードするために必要な拡張名
+        /// </summary>
+        public string[] extensionRequired;
     }
 }

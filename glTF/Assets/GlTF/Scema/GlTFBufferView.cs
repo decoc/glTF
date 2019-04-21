@@ -1,13 +1,12 @@
 ﻿using System;
 
-namespace UnityGlTF
+namespace UnityGlTF.Schema
 {
-    //
     /// <summary>
     /// BufferViewは1つのbufferを参照し，そのbufferがどのように構成されるか記述される
     /// </summary>
     [Serializable]
-    public class GlTFBufferView
+    public class GlTFBufferView:GlTFChildOfRootProperty
     {
         /// <summary>
         /// このインデックスのBufferを参照する
@@ -15,7 +14,7 @@ namespace UnityGlTF
         public int buffer;
 
         /// <summary>
-        /// 読み込み開始位置
+        /// バイナリデータの読み込み開始位置
         /// </summary>
         public int byteOffset;
 

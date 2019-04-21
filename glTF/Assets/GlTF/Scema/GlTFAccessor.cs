@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace UnityGlTF
+namespace UnityGlTF.Schema
 {
     /// <summary>
     /// bufferviewで定義されるbuffer情報の具体的な型や構成が記述される
     /// </summary>
     [Serializable]
-    public class GlTFAccessor
+    public class GlTFAccessor:GlTFChildOfRootProperty
     {
         public int bufferView;
 

@@ -1,9 +1,9 @@
 ﻿using System;
 
-namespace UnityGlTF
+namespace UnityGlTF.Schema
 {
     [Serializable]
-    public class GlTFAsset
+    public class GlTFAsset:GlTFProperty
     {
         public string copyright;
         public string generator;

@@ -2,16 +2,16 @@
 using System.IO;
 using UnityEngine;
 using UnityEngine.Networking;
-using UnityGlTF;
+using UnityGlTF.Schema;
 
 public class GlTFSample:MonoBehaviour {
 
     private void Start()
     {
-        StartCoroutine(Serialize());
+        StartCoroutine(Deserialize());
     }
 
-    public IEnumerator Serialize()
+    public IEnumerator Deserialize()
     {
         var path = Path.Combine(
             Application.streamingAssetsPath,
